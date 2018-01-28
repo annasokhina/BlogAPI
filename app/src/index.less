@@ -1,0 +1,85 @@
+@import "./_variables";
+
+body {
+ font-family: Helvetica, sans-serif;
+ background-color: @body-bg;
+ padding-top: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.block-wrapper {
+  background: #fff;
+  border: 1px solid @border;
+  border-radius: 5px;
+  box-shadow:1px 1px 10px @border;
+  padding: 2rem;
+  color: @text-dark;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: @text-dark;
+}
+
+.btn {
+  color: @btn;
+  background-color: #fff;
+  width: 200px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: normal;
+  border: 1px solid @btn;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  margin: 0 0 0 auto;
+  transition: all 250ms;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+   color: @text-light;
+    background: @btn;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+
+  & .btn:first-child {
+    margin-left: 0;
+  }
+
+  .delete, .cancel {
+   color: @error;
+   border-color: @error;
+
+   &:hover {
+    color: @text-light;
+    background: @error;
+   }
+  }
+  .submit {
+    margin-left: 0;
+    color: @success;
+    border-color: @success;
+
+    &:hover {
+      color: @text-light;
+      background: @success;
+    }
+  }
+}

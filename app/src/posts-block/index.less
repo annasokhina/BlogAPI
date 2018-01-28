@@ -1,0 +1,22 @@
+@import "../_variables";
+
+ul {
+  padding-left: 0;
+
+  li {
+    padding: 1rem;
+    list-style: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid @border;
+    transition: all 300ms;
+
+    &:hover {
+      border-color: @btn;
+
+      a {
+        color: @btn;
+      }
+    }
+  }
+}
